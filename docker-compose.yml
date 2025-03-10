@@ -1,0 +1,83 @@
+version: '3.8'
+
+services:
+  account-service:
+    build:
+      context: ./account-service
+      dockerfile: Dockerfile
+    container_name: account-service
+    ports:
+      - "8880:8880"
+    networks:
+      - qorvia-network
+    restart: always
+
+  api-gateway:
+    build:
+      context: ./api-gateway
+      dockerfile: Dockerfile
+    container_name: api-gateway
+    ports:
+      - "8888:8888"
+    networks:
+      - qorvia-network
+    restart: always
+
+  blog-feedback-service:
+    build:
+      context: ./blog-feedback-service
+      dockerfile: Dockerfile
+    container_name: blog-feedback-service
+    ports:
+      - "8881:8881"
+    networks:
+      - qorvia-network
+    restart: always
+
+  communication-service:
+    build:
+      context: ./communication-service
+      dockerfile: Dockerfile
+    container_name: communication-service
+    ports:
+      - "8882:8882"
+    networks:
+      - qorvia-network
+    restart: always
+
+  event-management-service:
+    build:
+      context: ./event-management-service
+      dockerfile: Dockerfile
+    container_name: event-management-service
+    ports:
+      - "8883:8883"
+    networks:
+      - qorvia-network
+    restart: always
+
+  notification-service:
+    build:
+      context: ./notification-service
+      dockerfile: Dockerfile
+    container_name: notification-service
+    ports:
+      - "8884:8884"
+    networks:
+      - qorvia-network
+    restart: always
+
+  payment-service:
+    build:
+      context: ./payment-service
+      dockerfile: Dockerfile
+    container_name: payment-service
+    ports:
+      - "8885:8885"
+    networks:
+      - qorvia-network
+    restart: always
+
+networks:
+  qorvia-network:
+    driver: bridge
