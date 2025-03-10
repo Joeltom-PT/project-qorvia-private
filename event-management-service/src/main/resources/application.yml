@@ -1,0 +1,6 @@
+server:
+  port: 8883
+  address: localhost
+spring:
+  application:
+    name: EVENT-MANAGEMENT-SERVICE

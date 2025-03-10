@@ -1,0 +1,17 @@
+server:
+  port: 8885
+  address: localhost
+spring:
+  application:
+    name: PAYMENT-SERVICE
+
+#eureka:
+#  client:
+#    register-with-eureka: true
+#    fetch-registry: true
+#    service-url:
+#      defaultZone: http://localhost:8065/eureka/
+#  instance:
+#    prefer-ip-address: true
+#    ip-address: 127.0.0.1
+#    hostname: localhost
