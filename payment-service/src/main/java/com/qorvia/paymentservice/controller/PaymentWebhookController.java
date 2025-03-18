@@ -29,7 +29,7 @@ import java.io.IOException;
 @Slf4j
 public class PaymentWebhookController {
 
-    private static final String STRIPE_WEBHOOK_SECRET = "whsec_54485c1c064b53813218c624ac28195bf2793223dca24e3d35c4ae4a5857c24d";
+    private static final String STRIPE_WEBHOOK_SECRET = "whsec_5J2KxdMXp4ij1Se6LHeU51VU4sJ35xzA";
 
     private final PaymentService paymentService;
     private final PayoutAccountService payoutAccountService;
